@@ -11,3 +11,6 @@ A smart, AI-Powered personal expense tracking and analysis application designed 
 1. **Clone the Repository:**
   ```bash
 git clone https://github.com/Riddhima220/AI-Personal-Expense-Analyzer.git
+```
+## 👧 Author
+-[**Riddhima Shukla**] (https://github.com/Riddhima220/AI-Personal-Expense-Analyzer.git
