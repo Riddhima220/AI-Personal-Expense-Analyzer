@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
+import plotly.express as px
 
 st.set_page_config(
     page_title="AI Personal Expense Analyzer",
@@ -82,6 +83,15 @@ if not df.empty:
     st.subheader("Category-wise Spending")
     chart_data = df.groupby("Category")["Amount"].sum()
     st.bar_chart(chart_data)
+    st.subheader("Expense Pie Chart")
+    fig = px.pie(
+        chart_data.reset_index(),
+        names="Category",
+        values="Amount",
+        title="Category-wise Expense",
+        hole=0.4
+    )
+    st.plotly_chart(fig, use_container_width=True)
 
     st.subheader("Expense History")
     st.dataframe(df, use_container_width=True)
